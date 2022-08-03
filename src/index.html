@@ -14,13 +14,21 @@
       <div class="container max-w-screen-xl mx-auto flex items-center justify-end space-x-6">
         <a class="flex items-center space-x-2 text-white hover:text-gray-100 text-sm" href="">
           <span>
-            <svg class="w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z"/></svg>
+            <svg class="w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+              <path
+                d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z" />
+              </svg>
           </span>
           <span>+1 (604) 824-2777</span>
         </a>
         <a class="flex items-center space-x-2 text-white hover:text-gray-100 text-sm" href="">
           <span>
-            <svg class="w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z"/></svg>
+            <svg class="w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+              <path
+                d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z" />
+              </svg>
           </span>
           <span>sales@craftypenguins.net</span>
         </a>
@@ -39,7 +47,8 @@
           </div>
           <div class="nav__toggle col-span-1 h-8 flex items-center justify-end lg:hidden">
             <button @click="sideNav = !sideNav"
-              class="text-orange-600 cursor-pointer border-none outline-none focus:outline-none focus:bg-transparent transition-all duration-300 ease-[ease] z-30" :class="{ 'mr-80': sideNav === true }">
+              class="text-orange-600 cursor-pointer border-none outline-none focus:outline-none focus:bg-transparent transition-all duration-300 ease-[ease] z-30"
+              :class="{ 'mr-80': sideNav === true }">
               <svg class="fill-current transition duration-300 ease-in-out transform" width="22" height="24">
                 <line class="stroke-current stroke-2 transition duration-500 ease-in-out transform"
                   :class="{ 'translate-x-1.5 translate-y-0 rotate-45': sideNav === true }" id="top" x1="0" x2="22"
@@ -199,12 +208,13 @@
           }'
             class="nav__wrapper col-span-9 xl:col-span-10 fixed lg:static w-full h-screen lg:h-auto left-0 top-0 flex justify-end lg:block bg-gray-900 lg:bg-transparent bg-opacity-40 transition-all duration-300 ease-[ease] z-20"
             :class="sideNav ? 'visible' : 'invisible lg:visible'">
-            <nav 
+            <nav
               class="nav__menu w-80 lg:w-full h-full lg:h-auto lg:flex lg:items-center lg:justify-end bg-gray-900 lg:bg-transparent transition-all duration-300 ease-[ease] shadow-md lg:shadow-none"
               :class="sideNav ? 'mr-0' : '-mr-80'">
               <div class="nav__brand-mobile lg:hidden px-6 mb-6">
                 <a class="nav__brand-link" href="/" title="Back to home">
-                  <img class="object-cover mx-auto" src="./../assets/images/logo.png" width="135" height="90" alt="logo">
+                  <img class="object-cover mx-auto" src="./../assets/images/logo.png" width="135" height="90"
+                    alt="logo">
                 </a>
               </div>
               <ul class="menu lg:flex lg:space-x-8 list-none pl-6 lg:pl-0">
@@ -214,14 +224,17 @@
                     class="menu__item relative group text-black hover:text-orange-600 uppercase transition duration-300 ease-[ease] after:absolute after:content-[''] after:w-full after:origin-left after:scale-x-0 hover:after:scale-x-100 after:left-0 after:bottom-0 lg:after:h-[2px] after:bg-orange-600 after:transition after:duration-300 after:ease-[ease] cursor-pointer">
 
                     <template x-if="!menu.submenu">
-                      <a class="menu__item-link block text-xs lg:text-sm text-current uppercase text-center font-medium lg:text-left py-3" :href="menu.url" x-text="menu.label"></a>
+                      <a class="menu__item-link block text-xs lg:text-sm text-current uppercase text-center font-medium lg:text-left py-3"
+                        :href="menu.url" x-text="menu.label"></a>
                     </template>
 
                     <template x-if="menu.submenu">
                       <div>
                         <button
                           class="w-full flex items-center justify-between lg:justify-start text-current cursor-pointer focus:outline-none">
-                          <span class="menu__link flex-1 text-xs lg:text-sm text-current uppercase text-center font-medium lg:text-left py-3" x-text="menu.label"></span>
+                          <span
+                            class="menu__link flex-1 text-xs lg:text-sm text-current uppercase text-center font-medium lg:text-left py-3"
+                            x-text="menu.label"></span>
                           <svg
                             class="svg-inline--fa fa-angle-down fa-w-10 fa-2x w-3 h-3 transition duration-300 ease-in-out transform lg:group-hover:-rotate-180 ml-2 mb-1 lg:mb-0"
                             :class="{'-rotate-90': selectedMenu === index }" aria-hidden="true" focusable="false"
@@ -240,7 +253,8 @@
                           <template x-for="item in menu.submenu" :key="item.id">
                             <li
                               class="submenu__item text-xs lg:text-sm text-white lg:text-gray-700 hover:text-orange-600 text-center lg:text-left lg:border-b lg:border-solid lg:border-gray-300 lg:last:border-b-0">
-                              <a class="submenu__item-link block text-current py-3" :href="item.url" x-text="item.label"></a>
+                              <a class="submenu__item-link block text-current py-3" :href="item.url"
+                                x-text="item.label"></a>
                             </li>
                           </template>
 
@@ -258,18 +272,61 @@
     </div>
   </header>
 
-  <section class="bg-[#263d59]">
-    <div class="container max-w-screen-xl mx-auto py-10 px-8">
+  <section class="bg-gradient-to-r from-[#253548] to-[#263d59] pt-32">
+    <div class="container max-w-screen-xl mx-auto pt-10 px-8">
       <div class="md:flex items-center">
         <div class="md:flex-none md:w-1/2 pr-16">
-          <h1 class="text-5xl lg:text-6xl text-gray-900 font-semibold leading-tight">Turn to-do into done with Tasks
-          </h1>
-          <div class="text-xl lg:text-2xl text-gray-900 pt-6">
-            <p>Stay on top of it all by creating to-dos in your notes and managing them your way.</p>
+          <h1 class="text-2xl lg:text-4xl text-white font-bold leading-tight">Linux Server Consulting and Managed
+            Services</h1>
+          <div class="text-lg lg:text-xl text-white pt-6">
+            <p>A competent and reliable team of Linux professionals based in North America.</p>
           </div>
-          <div class="mt-12 mb-16">
-            <a class="text-white font-medium bg-green-600 hover:bg-green-500 rounded-md py-3 px-16" href="">Get
-              started</a>
+          <div class="pt-8">
+            <ul>
+              <li class="mb-3">
+                <a class="text-white text-lg flex items-center space-x-3" href="">
+                  <span>
+                    <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M243.8 339.8C232.9 350.7 215.1 350.7 204.2 339.8L140.2 275.8C129.3 264.9 129.3 247.1 140.2 236.2C151.1 225.3 168.9 225.3 179.8 236.2L224 280.4L332.2 172.2C343.1 161.3 360.9 161.3 371.8 172.2C382.7 183.1 382.7 200.9 371.8 211.8L243.8 339.8zM512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z"/></svg>
+                  </span>
+                  <span>Server Maintenance and Patching</span>
+                </a>
+              </li>
+              <li class="mb-3">
+                <a class="text-white text-lg flex items-center space-x-3" href="">
+                  <span>
+                    <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M243.8 339.8C232.9 350.7 215.1 350.7 204.2 339.8L140.2 275.8C129.3 264.9 129.3 247.1 140.2 236.2C151.1 225.3 168.9 225.3 179.8 236.2L224 280.4L332.2 172.2C343.1 161.3 360.9 161.3 371.8 172.2C382.7 183.1 382.7 200.9 371.8 211.8L243.8 339.8zM512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z"/></svg>
+                  </span>
+                  <span>Security Audits, Pen Testing, EDR</span>
+                </a>
+              </li>
+              <li class="mb-3">
+                <a class="text-white text-lg flex items-center space-x-3" href="">
+                  <span>
+                    <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M243.8 339.8C232.9 350.7 215.1 350.7 204.2 339.8L140.2 275.8C129.3 264.9 129.3 247.1 140.2 236.2C151.1 225.3 168.9 225.3 179.8 236.2L224 280.4L332.2 172.2C343.1 161.3 360.9 161.3 371.8 172.2C382.7 183.1 382.7 200.9 371.8 211.8L243.8 339.8zM512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z"/></svg>
+                  </span>
+                  <span>24x7 Monitoring & Support</span>
+                </a>
+              </li>
+              <li class="mb-3">
+                <a class="text-white text-lg flex items-center space-x-3" href="">
+                  <span>
+                    <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M243.8 339.8C232.9 350.7 215.1 350.7 204.2 339.8L140.2 275.8C129.3 264.9 129.3 247.1 140.2 236.2C151.1 225.3 168.9 225.3 179.8 236.2L224 280.4L332.2 172.2C343.1 161.3 360.9 161.3 371.8 172.2C382.7 183.1 382.7 200.9 371.8 211.8L243.8 339.8zM512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z"/></svg>
+                  </span>
+                  <span>High Availabilty Services</span>
+                </a>
+              </li>
+              <li class="mb-3">
+                <a class="text-white text-lg flex items-center space-x-3" href="">
+                  <span>
+                    <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M243.8 339.8C232.9 350.7 215.1 350.7 204.2 339.8L140.2 275.8C129.3 264.9 129.3 247.1 140.2 236.2C151.1 225.3 168.9 225.3 179.8 236.2L224 280.4L332.2 172.2C343.1 161.3 360.9 161.3 371.8 172.2C382.7 183.1 382.7 200.9 371.8 211.8L243.8 339.8zM512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z"/></svg>
+                  </span>
+                  <span>DevOps, CI/CD, Docker, Kubernetes</span>
+                </a>
+              </li>
+            </ul>
+            <div class="pt-8">
+              <a class="text-white font-bold bg-orange-500 hover:bg-green-500 py-2 px-8 rounded-full transition-colors duration-300 ease-[ease]" href="">View All Services</a>
+            </div>
           </div>
         </div>
         <div class="md:flex-none md:w-1/2 cursor-pointer">
@@ -286,10 +343,12 @@
           <img src="assets/images/tasks_lp_screenshot@x2.png" alt="">
         </div>
         <div class="md:flex-none md:w-1/2 md:pl-12">
-          <h2 class="text-3xl lg:text-4xl text-gray-900 font-semibold leading-tight">See the big picture, or every little detail
+          <h2 class="text-3xl lg:text-4xl text-gray-900 font-semibold leading-tight">See the big picture, or every
+            little detail
           </h2>
           <div class="text-xl lg:text-2xl text-gray-900 pt-4">
-            <p>Get an overview of everything on your plate, or focus on the information you need to tackle the task at hand.</p>
+            <p>Get an overview of everything on your plate, or focus on the information you need to tackle the task at
+              hand.</p>
           </div>
         </div>
       </div>
@@ -305,7 +364,8 @@
         <div class="md:flex-none md:w-1/2 md:pr-10">
           <h2 class="text-3xl lg:text-4xl text-gray-900 font-semibold leading-tight">Put your to-dos in context</h2>
           <div class="text-xl lg:text-2xl text-gray-900 pt-4">
-            <p>Tasks live inside your notes, so there’s no need to interrupt your flow by switching between your notes and a dedicated task manager.</p>
+            <p>Tasks live inside your notes, so there’s no need to interrupt your flow by switching between your notes
+              and a dedicated task manager.</p>
           </div>
         </div>
       </div>
@@ -362,9 +422,11 @@
   <section>
     <div class="container max-w-screen-xl mx-auto py-10 md:px-8">
       <div class="text-center max-w-5xl mx-auto mb-10 px-8">
-        <h2 class="text-4xl lg:text-5xl text-gray-900 font-semibold leading-tight">Regain clarity and take control of your day</h2>
+        <h2 class="text-4xl lg:text-5xl text-gray-900 font-semibold leading-tight">Regain clarity and take control of
+          your day</h2>
         <div class="lg:px-12">
-          <p class="text-xl lg:text-2xl text-gray-900 pt-6">Start each day confident that you have a clear plan of action, and that nothing important will get lost in the shuffle.</p>
+          <p class="text-xl lg:text-2xl text-gray-900 pt-6">Start each day confident that you have a clear plan of
+            action, and that nothing important will get lost in the shuffle.</p>
         </div>
       </div>
       <div x-data="{selectedImage: 1, selected: null}" class="md:flex md:items-center lg:items-start">
