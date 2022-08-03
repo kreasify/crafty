@@ -10,7 +10,7 @@
 
 <body x-data="{sideNav: false, atTop: true}" :class="{ 'overflow-hidden': sideNav }">
   <header class="header relative">
-    <div class="bg-[#404040] py-2">
+    <div class="bg-[#404040] py-2 relative z-10">
       <div class="container max-w-screen-xl mx-auto flex items-center justify-end space-x-6">
         <a class="flex items-center space-x-2 text-white hover:text-gray-100 text-sm" href="">
           <span>
@@ -27,8 +27,8 @@
       </div>
     </div>
 
-    <div class="transition-all duration-500 ease-[ease] delay-300 animate-fadeInDown z-50"
-      :class="{ 'absolute w-full left-0 top-0 z-40 pt-12 pb-6': atTop, 'fixed w-full left-0 top-0 bg-white delay-300 animate-fadeInDown shadow-lg z-50 py-2': !atTop }"
+    <div class="transition-all duration-500 ease-[ease] delay-300 animate-fadeInDown bg-white"
+      :class="{ 'absolute w-full left-0 top-0 pt-12 pb-6': atTop, 'fixed w-full left-0 top-0 delay-300 animate-fadeInDown shadow-lg py-2': !atTop }"
       x-on:scroll.window="atTop = (window.pageYOffset > 200) ? false : true;">
       <div class="container w-full max-w-screen-xl mx-auto py-4 lg:py-0 px-6 lg:px-0">
         <div class="nav__wrapper grid grid-cols-12 items-center">
@@ -258,9 +258,7 @@
     </div>
   </header>
 
-  <div class="pt-16 lg:pt-32"></div>
-
-  <section x-data="{ openVideo: false}">
+  <section class="bg-[#263d59]">
     <div class="container max-w-screen-xl mx-auto py-10 px-8">
       <div class="md:flex items-center">
         <div class="md:flex-none md:w-1/2 pr-16">
@@ -274,33 +272,8 @@
               started</a>
           </div>
         </div>
-        <div @click="openVideo = !openVideo" class="md:flex-none md:w-1/2 cursor-pointer">
-          <img src="assets/images/task_video_thumbnail@2x.png" alt="">
-        </div>
-      </div>
-    </div>
-    <div x-show="openVideo"
-      class="fixed top-0 left-0 bottom-0 right-0 bg-black/90 transition-all duration-300 ease-[ease] z-[100] flex items-center justify-center cursor-pointer">
-      <div class="container max-w-4xl mx-auto px-6 py-4">
-        <div class="text-white flex justify-end mb-6">
-          <svg @click="openVideo = !openVideo" class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 27.12 27.12">
-            <title>Asset 9</title>
-            <g id="Layer_2" data-name="Layer 2">
-              <g id="Layer_1-2" data-name="Layer 1">
-                <rect x="12.06" y="-4.12" width="3" height="35.36" transform="translate(-5.62 13.56) rotate(-45)">
-                </rect>
-                <rect x="-4.12" y="12.06" width="35.36" height="3" transform="translate(-5.62 13.56) rotate(-45)">
-                </rect>
-              </g>
-            </g>
-          </svg>
-        </div>
-        <div @click.outside="openVideo = false" class="aspect-video">
-          <iframe id="youtube-player" class="w-full h-full border-0"
-            src="https://www.youtube.com/embed/glfLSI4mC2I?rel=0&amp;autoplay=1&amp;modestbranding=1&amp;enablejsapi=1"
-            allowfullscreen="true" data-gtm-yt-inspected-6952761_190="true"
-            title="Tasks: An easier way to turn to-do into done"></iframe>
+        <div class="md:flex-none md:w-1/2 cursor-pointer">
+          <img src="assets/images/Wim_Kerkhoff.png" alt="">
         </div>
       </div>
     </div>
