@@ -1,8 +1,12 @@
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
-  theme: {
-    extend: {
-      animation: {
+	content: ["./src/**/*.{html,js}"],
+	theme: {
+		extend: {
+			fontFamily: {
+				body: ['"Open Sans"'],
+				heading: ['Roboto'],
+			},
+			animation: {
 				fadeInDown: 'fadeInDown 900ms ease-in-out',
 			},
 			keyframes: {
@@ -17,7 +21,7 @@ module.exports = {
 					},
 				},
 			},
-    }
-  },
-  plugins: [],
+		}
+	},
+	plugins: [],
 }

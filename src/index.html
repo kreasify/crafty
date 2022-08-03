@@ -6,6 +6,9 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tasks | Evernote Tailwindcss Template</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body x-data="{sideNav: false, atTop: true}" :class="{ 'overflow-hidden': sideNav }">
@@ -36,7 +39,7 @@
     </div>
 
     <div class="transition-all duration-500 ease-[ease] delay-300 animate-fadeInDown bg-white"
-      :class="{ 'absolute w-full left-0 top-0 pt-12 pb-6': atTop, 'fixed w-full left-0 top-0 delay-300 animate-fadeInDown shadow-lg py-2': !atTop }"
+      :class="{ 'absolute w-full left-0 top-0 pt-12 pb-6': atTop, 'fixed w-full left-0 top-0 delay-300 animate-fadeInDown shadow-lg py-2 z-50': !atTop }"
       x-on:scroll.window="atTop = (window.pageYOffset > 200) ? false : true;">
       <div class="container w-full max-w-screen-xl mx-auto py-4 lg:py-0 px-6 lg:px-16">
         <div class="nav__wrapper grid grid-cols-12 items-center">
@@ -389,7 +392,7 @@
           <h2 class="text-[#26415f] text-2xl lg:text-4xl font-bold">It’s hard to find a competent IT partner you can
             trust</h2>
         </header>
-        <div class="text-lg text-gray-700 leading-relaxed">
+        <div class="text-lg text-gray-700 font-body leading-relaxed">
           <p class="mb-6">You may have hired external consultants in the past, but they didn’t have enough expertise to
             keep your systems running smoothly. Or worse, they weren’t reliable enough to deliver on time and left you
             feeling frustrated and insecure.</p>
@@ -401,23 +404,23 @@
   </section>
 
   <section>
-    <div class="container max-w-4xl mx-auto py-8 px-6">
+    <div class="container max-w-4xl mx-auto py-8 px-6 mb-8">
       <div>
         <header class="text-center mb-6">
           <h2 class="text-[#26415f] text-2xl lg:text-4xl font-bold">With Crafty Penguins, you can stop worrying about
             your IT and focus on growing your business</h2>
         </header>
-        <div class="text-lg text-gray-700 leading-relaxed">
+        <div class="text-lg text-gray-700 font-body leading-relaxed">
           <p class="mb-6">We are a team of competent and reliable Linux consultants that will carefully listen to you,
             get the job done fast and be there for you when you need us.</p>
         </div>
       </div>
-      <div class="lg:grid lg:grid-cols-3 lg:gap-x-6">
+      <div class="lg:grid lg:grid-cols-3 lg:gap-x-8">
         <div>
           <div>
             <img class="mx-auto" src="assets/images/peace-of-mind.png" width="100" height="100" alt="">
           </div>
-          <div class="text-center text-gray-700 leading-relaxed">
+          <div class="text-lg text-gray-700 font-body leading-relaxed text-center">
             <h3 class="text-[#26415f] text-xl lg:text-2xl font-bold mb-6">Get peace of mind</h3>
             <p>Enjoy the comfort of knowing that a reliable team of experts has your back at all times, making sure your
               systems stay operational 24/7.</p>
@@ -427,7 +430,7 @@
           <div>
             <img class="mx-auto" src="assets/images/Optimize.png" width="100" height="100" alt="">
           </div>
-          <div class="text-center text-gray-700 leading-relaxed">
+          <div class="text-lg text-gray-700 font-body leading-relaxed text-center">
             <h3 class="text-[#26415f] text-xl lg:text-2xl font-bold mb-6">Optimize & secure your systems</h3>
             <p>Our experts will tune up your systems to run faster and secure using fewer resources to keep your clients
               happy even when your business scales.</p>
@@ -437,10 +440,36 @@
           <div>
             <img class="mx-auto" src="assets/images/Focus.png" width="100" height="100" alt="">
           </div>
-          <div class="text-center text-gray-700 leading-relaxed">
+          <div class="text-lg text-gray-700 font-body leading-relaxed text-center">
             <h3 class="text-[#26415f] text-xl lg:text-2xl font-bold mb-6">Focus on your business</h3>
             <p>Don’t make your own people waste days, fixing pesky bugs or installing new tools. Letting us take care of
               that will be faster (and probably cheaper).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-100">
+    <div class="container max-w-screen-xl mx-auto py-16 px-6 lg:px-16">
+      <div class="lg:flex lg:space-x-6">
+        <div class="lg:flex-none lg:w-2/6">
+          <div class="w-4/6 aspect-square">
+            <img class="w-full shadow-[rgb(178_178_178_/_60%)_5px_5px_5px_5px]" src="assets/images/Greg-Hansen-600x600.jpg" width="300" height="300" alt="">
+          </div>
+        </div>
+        <div class="lg:flex-1 lg:w-4/6 relative">
+          <div class="absolute top-0 -left-20">
+            <img src="assets/images/quotation-marks.png" alt="">
+          </div>
+          <div class="text-lg text-gray-700 font-body leading-relaxed pt-10">
+            <h3 class="text-[#26415f] text-xl lg:text-2xl font-bold mb-4">Fast, efficient and reliable team of experts</h3>
+            <p class="mb-6">We came to Crafty Penguins when our company was experiencing rapid growth. Our website traffic was increasing daily, and we needed someone capable of building a reliable, hardened production environment that could easily scale.</p>
+            <p class="mb-6">The team of Crafty Penguins was fast and efficient in getting their infrastructure set up and monitoring our production servers. That alone eased a lot of fears of a catastrophic failure on our side. They listened to us to identify the job that needed to get done, and they did it reliably and professionally with great communication throughout the process.</p>
+            <p class="mb-6">We’ve been working with Crafty Penguins ever since to resolve other issues and implement a series of further enhancements. It’s comforting to know that we’re working with experts that will be there for us when we need them.</p>
+            <div class="text-right">
+              <p class="text-[#26415f] font-bold">Greg Hansen, Architect, BacklotCars, USA</p>
+            </div>
           </div>
         </div>
       </div>
