@@ -446,7 +446,7 @@
                                 <div class="relative overflow-hidden transition-all max-h-0 duration-700" style=""
                                     x-ref="container1"
                                     x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
-                                    <div class="px-6 py-6">
+                                    <div class="p-6">
                                         <ul class="list-disc pl-6 leading-loose">
                                             <li>DevOps and scripting to speed up your DevOps pipeline and get code
                                                 updates from your development environment into production without
@@ -479,7 +479,7 @@
                                 <div class="relative overflow-hidden transition-all max-h-0 duration-700" style=""
                                     x-ref="container2"
                                     x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''">
-                                    <div class="px-6 pb-8">
+                                    <div class="p-6">
                                         <ul class="list-disc pl-6 leading-loose">
                                             <li>Migration of legacy software products to modern web-based
                                                 applications<br>
@@ -519,7 +519,7 @@
                                 <div class="relative overflow-hidden transition-all max-h-0 duration-700" style=""
                                     x-ref="container3"
                                     x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''">
-                                    <div class="px-6 pb-8">
+                                    <div class="p-6">
                                         <ul class="list-disc pl-6 leading-loose">
                                             <li>Development of initial PoC software to present to investors/li&gt;</li>
                                             <li>Development of initial framework skeleton setup and best practices
@@ -532,27 +532,28 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="relative border-b border-gray-200 transition-all duration-300"
-                                :class="{ 'bg-gray-100 md:rounded-lg': selected == 4 }">
-                                <button type="button" class="w-full px-6 py-6"
+                            <li class="relative group mb-6">
+                                <button type="button"
+                                    class="w-full group-hover:bg-gray-100 border border-gray-200 rounded-md transition-all duration-300 ease-[ease] px-4 py-2"
                                     @click="selected !== 4 ? selected = 4 : selected = null">
-                                    <div class="flex items-center justify-between">
-                                        <span class="text-gray-700 font-medium">For niche businesses</span>
-                                        <span class="text-green-600">
-                                            <svg class="svg-icon transition-all duration-300"
-                                                :class="{ 'rotate-180': selected === 4 }" width="31" height="31"
-                                                viewBox="0 0 30.33 30.27" fill="currentColor"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path class="st0" d="M15,0C6.7,0,0,6.7,0,15c0,8.3,6.7,15,15,15c8.3,0,15-6.7,15-15C30,6.7,23.3,0,15,0z M15,18.7l-6-6l1.4-1.4
-                                    l4.6,4.6l4.6-4.6l1.4,1.4L15,18.7z"></path>
+                                    <div class="flex items-center space-x-2">
+                                        <span class="text-gray-700">
+                                            <svg class="svg-inline--fa fa-angle-down fa-w-10 fa-2x w-4 h-4 transition duration-300 ease-in-out"
+                                                :class="{ 'rotate-180': selected === 4 }" aria-hidden="true"
+                                                focusable="false" data-prefix="far" data-icon="angle-down" role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                                <path fill="currentColor"
+                                                    d="M151.5 347.8L3.5 201c-4.7-4.7-4.7-12.3 0-17l19.8-19.8c4.7-4.7 12.3-4.7 17 0L160 282.7l119.7-118.5c4.7-4.7 12.3-4.7 17 0l19.8 19.8c4.7 4.7 4.7 12.3 0 17l-148 146.8c-4.7 4.7-12.3 4.7-17 0z"
+                                                    class=""></path>
                                             </svg>
                                         </span>
+                                        <span class="text-gray-700 font-bold">For niche businesses</span>
                                     </div>
                                 </button>
                                 <div class="relative overflow-hidden transition-all max-h-0 duration-700" style=""
                                     x-ref="container4"
                                     x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''">
-                                    <div class="px-6 pb-8">
+                                    <div class="p-6">
                                         <ul class="list-disc pl-6 leading-loose">
                                             <li>Business automation solutions tailored to your industry and your
                                                 business to give you a competitive advantage in your niche</li>
@@ -587,377 +588,16 @@
         </div>
     </section>
 
-    <section>
-        <div class="container max-w-4xl mx-auto py-8 px-6 mb-8">
-            <div>
-                <header class="text-center mb-6">
-                    <h2 class="text-[#26415f] text-2xl lg:text-4xl font-bold">With Crafty Penguins, you can stop
-                        worrying about
-                        your IT and focus on growing your business</h2>
-                </header>
-                <div class="text-lg text-gray-700 font-body leading-relaxed">
-                    <p class="mb-6">We are a team of competent and reliable Linux consultants that will carefully listen
-                        to you,
-                        get the job done fast and be there for you when you need us.</p>
-                </div>
-            </div>
-            <div class="lg:grid lg:grid-cols-3 lg:gap-x-8">
-                <div>
-                    <div>
-                        <img class="mx-auto" src="./../assets/images/peace-of-mind.png" width="100" height="100" alt="">
-                    </div>
-                    <div class="text-lg text-gray-700 font-body leading-relaxed text-center">
-                        <h3 class="text-[#26415f] text-xl lg:text-2xl font-bold mb-6">Get peace of mind</h3>
-                        <p>Enjoy the comfort of knowing that a reliable team of experts has your back at all times,
-                            making sure your
-                            systems stay operational 24/7.</p>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <img class="mx-auto" src="./../assets/images/Optimize.png" width="100" height="100" alt="">
-                    </div>
-                    <div class="text-lg text-gray-700 font-body leading-relaxed text-center">
-                        <h3 class="text-[#26415f] text-xl lg:text-2xl font-bold mb-6">Optimize & secure your systems
-                        </h3>
-                        <p>Our experts will tune up your systems to run faster and secure using fewer resources to keep
-                            your clients
-                            happy even when your business scales.</p>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <img class="mx-auto" src="./../assets/images/Focus.png" width="100" height="100" alt="">
-                    </div>
-                    <div class="text-lg text-gray-700 font-body leading-relaxed text-center">
-                        <h3 class="text-[#26415f] text-xl lg:text-2xl font-bold mb-6">Focus on your business</h3>
-                        <p>Don’t make your own people waste days, fixing pesky bugs or installing new tools. Letting us
-                            take care of
-                            that will be faster (and probably cheaper).</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section class="bg-gray-100">
         <div class="container max-w-screen-xl mx-auto py-16 px-6 lg:px-16">
-            <div class="lg:flex lg:space-x-6">
-                <div class="lg:flex-none lg:w-2/6">
-                    <div class="w-4/6 aspect-square">
-                        <img class="w-full shadow-[rgb(178_178_178_/_60%)_5px_5px_5px_5px]"
-                            src="./../assets/images/Greg-Hansen-600x600.jpg" width="300" height="300" alt="">
-                    </div>
-                </div>
-                <div class="lg:flex-1 lg:w-4/6 relative">
-                    <div class="absolute top-0 -left-20">
-                        <img src="./../assets/images/quotation-marks.png" alt="">
-                    </div>
-                    <div class="text-lg text-gray-700 font-body leading-relaxed pt-10">
-                        <h3 class="text-[#26415f] text-xl lg:text-2xl font-bold mb-4">Fast, efficient and reliable team
-                            of experts
-                        </h3>
-                        <p class="mb-6">We came to Crafty Penguins when our company was experiencing rapid growth. Our
-                            website
-                            traffic was increasing daily, and we needed someone capable of building a reliable, hardened
-                            production
-                            environment that could easily scale.</p>
-                        <p class="mb-6">The team of Crafty Penguins was fast and efficient in getting their
-                            infrastructure set up
-                            and monitoring our production servers. That alone eased a lot of fears of a catastrophic
-                            failure on our
-                            side. They listened to us to identify the job that needed to get done, and they did it
-                            reliably and
-                            professionally with great communication throughout the process.</p>
-                        <p class="mb-6">We’ve been working with Crafty Penguins ever since to resolve other issues and
-                            implement a
-                            series of further enhancements. It’s comforting to know that we’re working with experts that
-                            will be there
-                            for us when we need them.</p>
-                        <div class="text-right">
-                            <p class="text-[#26415f] font-bold">Greg Hansen, Architect, BacklotCars, USA</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="container max-w-screen-xl mx-auto py-16 px-6 lg:px-16">
-            <div>
-                <header class="text-center mb-6">
-                    <h2 class="text-[#26415f] text-2xl lg:text-4xl font-bold mb-8">OUR SERVICES</h2>
-                </header>
-                <div class="lg:grid lg:grid-cols-3 lg:gap-x-6 text-lg text-gray-700 font-body leading-loose">
-                    <div>
-                        <h3 class="text-[#26415f] text-lg lg:text-xl text-center font-bold mb-4">Maintenance & Support
-                        </h3>
-                        <ul class="list-disc pl-6">
-                            <li>Proactive patching and health checks to catch issues before causing outages</li>
-                            <li>Monitoring &amp; health checks</li>
-                            <li>Fixing urgent issues like production bugs, hack attacks or performance problems</li>
-                            <li>Supporting your developers with our knowledge and tools</li>
-                            <li>Ad hoc support via Slack, email or phone</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-[#26415f] text-lg lg:text-xl text-center font-bold mb-4">Setup and Migrations
-                        </h3>
-                        <ul class="list-disc pl-6">
-                            <li>Linux server setup &amp; migrations</li>
-                            <li>Cloud service management</li>
-                            <li>Web Server performance analysis &amp; optimization</li>
-                            <li>Enterprise level WordPress setup and optimization</li>
-                            <li>DB Server performance analysis &amp; optimization</li>
-                            <li>DevOps, CI/CD, and Kubernetes implementation</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-[#26415f] text-lg lg:text-xl text-center font-bold mb-4">Security & Endpoint
-                            Protection</h3>
-                        <ul class="list-disc pl-6">
-                            <li>Endpoint Detection &amp; Response (EDR)</li>
-                            <li>Vulnerability Scan and Reporting</li>
-                            <li>Penetration Testing</li>
-                            <li>Security Hardening</li>
-                            <li>File Integrity Monitoring</li>
-                            <li>Host-based Intrusion Detection System (HIDS)</li>
-                            <li>Compliance &amp; Security Management</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="text-center pt-8">
-                    <a class="text-white font-bold bg-orange-500 hover:bg-green-500 py-2 px-8 rounded-full transition-colors duration-300 ease-[ease]"
-                        href="">View All Services</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section x-data="{showMore: false}" class="bg-gray-100">
-        <div class="container max-w-screen-xl mx-auto py-16 px-6 lg:px-16">
-            <div>
-                <header class="text-center mb-6">
-                    <h2 class="text-[#26415f] text-2xl lg:text-4xl font-bold mb-8">OUR TECHNOLOGY STACK</h2>
-                </header>
-                <div class="lg:grid lg:grid-cols-4 lg:gap-x-6 text-lg text-gray-700 font-body leading-normal">
-                    <div>
-                        <h4 class="text-[#26415f] text-lg lg:text-xl font-bold mb-4">Linux Distributions</h4>
-                        <ul>
-                            <li>Debian</li>
-                            <li>Ubuntu</li>
-                            <li>CentOS</li>
-                            <li>Red Hat</li>
-                            <li>Rocky Linux</li>
-                            <li>Suse</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="text-[#26415f] text-lg lg:text-xl font-bold mb-4">DevOps</h4>
-                        <ul>
-                            <li>Salt Stack</li>
-                            <li>Docker</li>
-                            <li>Jenkins</li>
-                            <li>Kubernetes</li>
-                            <li>Ansible</li>
-                            <li>ELK</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="text-[#26415f] text-lg lg:text-xl font-bold mb-4">Cloud</h4>
-                        <ul>
-                            <li>Digital Ocean</li>
-                            <li>Azure</li>
-                            <li>Google</li>
-                            <li>Amazon AWS</li>
-                            <li>OpenStack</li>
-                            <li>OVH</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="text-[#26415f] text-lg lg:text-xl font-bold mb-4">Databases</h4>
-                        <ul>
-                            <li>PostgreSQL</li>
-                            <li>MySQL</li>
-                            <li>MariaDB</li>
-                            <li>MongoDB</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="pt-8 mb-6">
-                    <button @click="showMore = !showMore"
-                        class="flex w-full items-center space-x-2 text-orange-600 text-xl font-bold bg-gray-50 hover:bg-gray-200 border border-solid border-gray-200 py-3 px-2 rounded-md transition-colors duration-300 ease-[ease]">
-                        <span>
-                            <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
-                                <path
-                                    d="M118.6 105.4l128 127.1C252.9 239.6 256 247.8 256 255.1s-3.125 16.38-9.375 22.63l-128 127.1c-9.156 9.156-22.91 11.9-34.88 6.943S64 396.9 64 383.1V128c0-12.94 7.781-24.62 19.75-29.58S109.5 96.23 118.6 105.4z" />
-                            </svg>
-                        </span>
-                        <span>More Technologies</span>
-                    </button>
-                </div>
-                <div x-show="showMore" x-transition:enter="transition ease-out duration-75"
-                    x-transition:enter-start="opacity-0 transform scale-90"
-                    x-transition:enter-end="opacity-100 transform scale-100"
-                    x-transition:leave="transition ease-in duration-75"
-                    x-transition:leave-start="opacity-100 transform scale-100"
-                    x-transition:leave-end="opacity-0 transform scale-90"
-                    class="lg:grid lg:grid-cols-4 lg:gap-x-6 text-lg text-gray-700 font-body leading-normal">
-                    <div class="grid-item">
-                        <div class="mb-6">
-                            <h4 class="text-[#26415f] text-lg lg:text-xl font-bold mb-4">Enterprise Storage</h4>
-                            <ul>
-                                <li>CEPH</li>
-                                <li>ZFS</li>
-                                <li>GlusterFS</li>
-                                <li>SAN/NAS</li>
-                                <li>RAID</li>
-                            </ul>
-                        </div>
-                        <div class="mb-6">
-                            <h4 class="text-[#26415f] text-lg lg:text-xl font-bold mb-4">Web & Proxy Servers</h4>
-                            <ul>
-                                <li>Apache</li>
-                                <li>Squid</li>
-                                <li>Varnish</li>
-                                <li>NGinx</li>
-                                <li>JBoss</li>
-                                <li>Tomcat</li>
-                            </ul>
-                        </div>
-                        <div class="mb-6">
-                            <h4 class="text-[#26415f] text-lg lg:text-xl font-bold mb-4">Caching Systems</h4>
-                            <ul>
-                                <li>NGINX</li>
-                                <li>Memcache</li>
-                                <li>Redis</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="mb-6">
-                            <h4 class="text-[#26415f] text-lg lg:text-xl font-bold mb-4">Programming Languages</h4>
-                            <ul>
-                                <li>PHP</li>
-                                <li>Python</li>
-                                <li>Java</li>
-                                <li>Ruby</li>
-                                <li>Node.JS</li>
-                            </ul>
-                        </div>
-                        <div class="mb-6">
-                            <h4 class="text-[#26415f] text-lg lg:text-xl font-bold mb-4">Virtualization</h4>
-                            <ul>
-                                <li>KVM</li>
-                                <li>LXC</li>
-                                <li>Proxmox</li>
-                                <li>VMWare</li>
-                                <li>HyperV</li>
-                            </ul>
-                        </div>
-                        <div class="mb-6">
-                            <h4 class="text-[#26415f] text-lg lg:text-xl font-bold mb-4">Networking</h4>
-                            <ul>
-                                <li>HA Proxy</li>
-                                <li>IP Tables</li>
-                                <li>Quagga</li>
-                                <li>OSPF</li>
-                                <li>BGP</li>
-                                <li>VRRP</li>
-                                <li>IPVS</li>
-                                <li>VLANs</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="mb-6">
-                            <h4 class="text-[#26415f] text-lg lg:text-xl font-bold mb-4">Amazon Cloud Services</h4>
-                            <ul>
-                                <li>CloudFormation</li>
-                                <li>CloudWatch</li>
-                                <li>CodePipeline</li>
-                                <li>Elastic Commpute</li>
-                                <li>Elastic Container Services</li>
-                                <li>Relational Database Service</li>
-                                <li>Route53 – DNS</li>
-                                <li>S3 – Bulk storage</li>
-                                <li>VPC – Private Cloud</li>
-                            </ul>
-                        </div>
-                        <div class="mb-6">
-                            <h4 class="text-[#26415f] text-lg lg:text-xl font-bold mb-4">VPN Tunnelling</h4>
-                            <ul>
-                                <li>OpenVPN</li>
-                                <li>OpenSWAN</li>
-                                <li>StrongSWAN</li>
-                                <li>WireGuard</li>
-                                <li>MLVPN</li>
-                                <li>GRE</li>
-                                <li>SDWAN</li>
-                            </ul>
-                        </div>
-                        <div class="mb-6">
-                            <h4 class="text-[#26415f] text-lg lg:text-xl font-bold mb-4">Monitoring and Metrics</h4>
-                            <ul>
-                                <li>Prometheus</li>
-                                <li>InfluxDB</li>
-                                <li>Grafana</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="mb-6">
-                            <h4 class="text-[#26415f] text-lg lg:text-xl font-bold mb-4">File Systems</h4>
-                            <ul>
-                                <li>CephFS</li>
-                                <li>Gluster</li>
-                                <li>NFS</li>
-                                <li>CIFS</li>
-                                <li>ZFS</li>
-                            </ul>
-                        </div>
-                        <div class="mb-6">
-                            <h4 class="text-[#26415f] text-lg lg:text-xl font-bold mb-4">High Availability</h4>
-                            <ul>
-                                <li>IPVS</li>
-                                <li>HA Proxy</li>
-                                <li>VRRP</li>
-                                <li>KeepaliveD</li>
-                            </ul>
-                        </div>
-                        <div class="mb-6">
-                            <h4 class="text-[#26415f] text-lg lg:text-xl font-bold mb-4">Log management</h4>
-                            <ul>
-                                <li>ElasticSearch</li>
-                                <li>LogStash</li>
-                                <li>Kibana</li>
-                            </ul>
-                        </div>
-                        <div class="mb-6">
-                            <h4 class="text-[#26415f] text-lg lg:text-xl font-bold mb-4">Web Frameworks</h4>
-                            <ul>
-                                <li>GitLab</li>
-                                <li>Atlassian products</li>
-                                <li>WordPress</li>
-                                <li>Magento</li>
-                                <li>Drupal</li>
-                                <li>Django</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="container max-w-screen-xl mx-auto py-16 px-6 lg:px-16">
+            <header class="text-center mb-6">
+                <h2 class="text-[#26415f] text-2xl lg:text-4xl font-bold mb-6">OUR HAPPY CLIENTS</h2>
+            </header>
             <div class="lg:flex lg:space-x-6 mb-12">
                 <div class="lg:flex-none lg:w-2/6">
                     <div class="w-4/6 aspect-square">
                         <img class="w-full shadow-[rgb(178_178_178_/_60%)_5px_5px_5px_5px]"
-                            src="./../assets/images/Herman-van-Rhijn.jpg" width="300" height="300" alt="">
+                            src="./../assets/images/Jason-Ziolo-600x600.jpg" width="300" height="300" alt="">
                     </div>
                 </div>
                 <div class="lg:flex-1 lg:w-4/6 relative">
@@ -965,30 +605,20 @@
                         <img src="./../assets/images/quotation-marks.png" alt="">
                     </div>
                     <div class="text-lg text-gray-700 font-body leading-relaxed pt-10">
-                        <h3 class="text-[#26415f] text-xl lg:text-2xl font-bold mb-4">A capable and trustworthy partner
-                            that allows
-                            us to focus on our core business</h3>
-                        <p class="mb-6">Having Crafty Penguins manage our systems saves us time so that we can focus on
-                            our core
-                            business. At the moment, we serve 25,000+ customers with only two of our own staff members.
-                        </p>
-                        <p class="mb-6">The team of Crafty Penguins has very in-depth knowledge, is capable of
-                            investigating the
-                            issues a lot deeper than an average IT provider and is always there for us when we need
-                            them.</p>
+                        <h3 class="text-[#26415f] text-xl lg:text-2xl font-bold mb-4">Crafty Penguins truly felt like a member of our team.</h3>
+                        <p class="mb-6">I could call Crafty Penguins at any time, and they were always available and felt like a team member. They not only supported our servers but trained me and my team on some new technologies so that we now have better dev ops as well.</p>
+                        <p class="mb-6">Do you want just a vendor or a real partner? If you’re looking for the former, go find the lowest bid. When you ultimately are let down, then hire Crafty Penguins like you should have in the first place.</p>
                         <div class="text-right">
-                            <p class="text-[#26415f] font-bold">Herman van Rhijn, Technical Director, Kliksafe B.V.
-                                Nunspeet,
-                                Netherlands</p>
+                            <p class="text-[#26415f] font-bold">Jason Ziolo, President & CEO, Dorian Solutions, USA</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="lg:flex lg:space-x-6">
+            <div class="lg:flex lg:space-x-6 mb-12">
                 <div class="lg:flex-none lg:w-2/6">
                     <div class="w-4/6 aspect-square">
                         <img class="w-full shadow-[rgb(178_178_178_/_60%)_5px_5px_5px_5px]"
-                            src="./../assets/images/Laurie-Coops.jpg" width="300" height="300" alt="">
+                            src="./../assets/images/Brent-Bawl-600x600.jpg" width="300" height="300" alt="">
                     </div>
                 </div>
                 <div class="lg:flex-1 lg:w-4/6 relative">
@@ -996,19 +626,32 @@
                         <img src="./../assets/images/quotation-marks.png" alt="">
                     </div>
                     <div class="text-lg text-gray-700 font-body leading-relaxed pt-10">
-                        <h3 class="text-[#26415f] text-xl lg:text-2xl font-bold mb-4">Creative Solutions, Improved Page
-                            Load Times,
-                            Experience, and Knowledge Sharing with our Developers</h3>
-                        <p class="mb-6">Crafty Penguins has been our #1 IT support for the past 5 years. They are a real
-                            team that
-                            works together to solve our IT issues in a friendly and professional manner. They react
-                            fast, are
-                            available 24/7 and always follow up to make sure the issues have been resolved. It’s a great
-                            relief to
-                            have a Linux support team that actually knows what they are doing.</p>
+                        <h3 class="text-[#26415f] text-xl lg:text-2xl font-bold mb-4">With Crafty Penguins, we started saving money immediately</h3>
+                        <p class="mb-6">Crafty Penguins helped us cut our server rack monthly rental in half. Also, our prior consultants recommended us purchasing more servers, but the assessment of Crafty Penguins showed us that we had enough space with what was already there.</p>
+                        <p class="mb-6">We value honesty and trust of their team, which is a pretty big deal when IT is not familiar territory for anyone working in the company.</p>
                         <div class="text-right">
-                            <p class="text-[#26415f] font-bold">Laurie Coops, Office Manager, Cedar Care Clinic, Canada
-                            </p>
+                            <p class="text-[#26415f] font-bold">Brent Bawel, Director, Mindfuel, Canada</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:flex lg:space-x-6 mb-12">
+                <div class="lg:flex-none lg:w-2/6">
+                    <div class="w-4/6 aspect-square">
+                        <img class="w-full shadow-[rgb(178_178_178_/_60%)_5px_5px_5px_5px]"
+                            src="./../assets/images/Paul-Linenberg-600x600.jpg" width="300" height="300" alt="">
+                    </div>
+                </div>
+                <div class="lg:flex-1 lg:w-4/6 relative">
+                    <div class="absolute top-0 -left-20">
+                        <img src="./../assets/images/quotation-marks.png" alt="">
+                    </div>
+                    <div class="text-lg text-gray-700 font-body leading-relaxed pt-10">
+                        <h3 class="text-[#26415f] text-xl lg:text-2xl font-bold mb-4">We relied on their team to be the experts, and they didn’t disappoint.</h3>
+                        <p class="mb-6">We came to Crafty Penguins when it became evident that we didn’t have a solid infrastructure to guarantee our users reliable performance and data security. We relied on their team to be the experts, and they didn’t disappoint.</p>
+                        <p class="mb-6">They helped us build a new, reliable architecture that gives us a comfortable sense of security. We now stopped worrying about our system crashing and can concentrate on running our business.</p>
+                        <div class="text-right">
+                            <p class="text-[#26415f] font-bold">Paul Linenberg, President, Gotcha Covered, USA</p>
                         </div>
                     </div>
                 </div>
@@ -1020,7 +663,8 @@
         <div class="container max-w-screen-xl mx-auto py-16 px-6 lg:px-16">
             <div class="max-w-4xl mx-auto">
                 <header class="text-center mb-6">
-                    <h2 class="text-[#26415f] text-2xl lg:text-4xl font-bold">INTERESTED? LET’S TALK.</h2>
+                    <h2 class="text-[#26415f] text-2xl lg:text-4xl font-bold mb-3">INTERESTED? LET’S TALK.</h2>
+                    <div class="w-24 h-[3px] bg-orange-600 mx-auto"></div>
                 </header>
                 <div class="text-lg text-gray-700 font-body leading-relaxed text-center">
                     <p class="mb-6">Interested in working with us? Use the form below to schedule a free 20-minute call
