@@ -15,12 +15,11 @@
 
 <body x-data="{sideNav: false, atTop: true}" :class="{ 'overflow-hidden': sideNav }">
   <header class="header relative">
-    <div class="bg-[#404040] py-2 relative z-10">
+    <div class="bg-[#404040] py-2 relative z-10 hidden lg:block">
       <div class="container max-w-screen-xl mx-auto flex items-center justify-end space-x-6 px-6 lg:px-16">
         <a class="flex items-center space-x-2 text-white hover:text-gray-100 text-sm" href="">
           <span>
             <svg class="w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-              <!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
               <path
                 d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z" />
             </svg>
@@ -30,7 +29,6 @@
         <a class="flex items-center space-x-2 text-white hover:text-gray-100 text-sm" href="">
           <span>
             <svg class="w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-              <!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
               <path
                 d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z" />
             </svg>
@@ -41,7 +39,7 @@
     </div>
 
     <div class="transition-all duration-500 ease-[ease] delay-300 animate-fadeInDown bg-white"
-      :class="{ 'absolute w-full left-0 top-0 pt-12 pb-6': atTop, 'fixed w-full left-0 top-0 delay-300 animate-fadeInDown shadow-lg py-2 z-50': !atTop }"
+      :class="{ 'absolute w-full left-0 top-0 lg:pt-12 lg:pb-6': atTop, 'fixed w-full left-0 top-0 delay-300 animate-fadeInDown shadow-lg py-2 z-50': !atTop }"
       x-on:scroll.window="atTop = (window.pageYOffset > 200) ? false : true;">
       <div class="container w-full max-w-screen-xl mx-auto py-4 lg:py-0 px-6 lg:px-16">
         <div class="nav__wrapper grid grid-cols-12 items-center">
@@ -52,8 +50,7 @@
           </div>
           <div class="nav__toggle col-span-1 h-8 flex items-center justify-end lg:hidden">
             <button @click="sideNav = !sideNav"
-              class="text-orange-600 cursor-pointer border-none outline-none focus:outline-none focus:bg-transparent transition-all duration-300 ease-[ease] z-30"
-              :class="{ 'mr-80': sideNav === true }">
+              class="text-gray-700 hover:text-orange-600 cursor-pointer border-none outline-none focus:outline-none p-1 transition-all duration-300 ease-[ease] z-30">
               <svg class="fill-current transition duration-300 ease-in-out transform" width="22" height="24">
                 <line class="stroke-current stroke-2 transition duration-500 ease-in-out transform"
                   :class="{ 'translate-x-1.5 translate-y-0 rotate-45': sideNav === true }" id="top" x1="0" x2="22"
@@ -214,22 +211,16 @@
             class="nav__wrapper col-span-9 xl:col-span-10 fixed lg:static w-full h-screen lg:h-auto left-0 top-0 flex justify-end lg:block bg-gray-900 lg:bg-transparent bg-opacity-40 transition-all duration-300 ease-[ease] z-20"
             :class="sideNav ? 'visible' : 'invisible lg:visible'">
             <nav
-              class="nav__menu w-80 lg:w-full h-full lg:h-auto lg:flex lg:items-center lg:justify-end bg-gray-900 lg:bg-transparent transition-all duration-300 ease-[ease] shadow-md lg:shadow-none"
+              class="nav__menu w-80 lg:w-full h-full lg:h-auto lg:flex lg:items-center lg:justify-end bg-white lg:bg-transparent transition-all duration-300 ease-[ease] shadow-md lg:shadow-none pt-16 lg:pt-0"
               :class="sideNav ? 'mr-0' : '-mr-80'">
-              <div class="nav__brand-mobile lg:hidden px-6 mb-6">
-                <a class="nav__brand-link" href="/" title="Back to home">
-                  <img class="object-cover mx-auto" src="./../assets/images/logo.png" width="135" height="90"
-                    alt="logo">
-                </a>
-              </div>
-              <ul class="menu lg:flex lg:space-x-8 list-none pl-6 lg:pl-0">
+              <ul class="menu lg:flex lg:space-x-8 list-none px-6 lg:px-0 pt-4 lg:pt-0">
                 <!-- change menu lists data in src>data>menus.json -->
                 <template x-for="(menu, index) in menus" :key="menu.id">
                   <li @click="selectedMenu !== index ? selectedMenu = index : selectedMenu = null"
-                    class="menu__item relative group text-black hover:text-orange-600 uppercase transition duration-300 ease-[ease] after:absolute after:content-[''] after:w-full after:origin-left after:scale-x-0 hover:after:scale-x-100 after:left-0 after:bottom-0 lg:after:h-[2px] after:bg-orange-600 after:transition after:duration-300 after:ease-[ease] cursor-pointer">
+                    class="menu__item relative group text-black hover:text-orange-600 uppercase border-b lg:border-b-0 border-solid border-gray-300 last:border-b-0 transition duration-300 ease-[ease] after:absolute after:content-[''] after:w-full after:origin-left after:scale-x-0 hover:after:scale-x-100 after:left-0 after:bottom-0 lg:after:h-[2px] after:bg-orange-600 after:transition after:duration-300 after:ease-[ease] cursor-pointer">
 
                     <template x-if="!menu.submenu">
-                      <a class="menu__item-link block text-xs lg:text-sm text-current uppercase text-center font-medium lg:text-left py-3"
+                      <a class="menu__item-link block text-sm text-current uppercase font-medium py-3"
                         :href="menu.url" x-text="menu.label"></a>
                     </template>
 
@@ -238,7 +229,7 @@
                         <button
                           class="w-full flex items-center justify-between lg:justify-start text-current cursor-pointer focus:outline-none">
                           <span
-                            class="menu__link flex-1 text-xs lg:text-sm text-current uppercase text-center font-medium lg:text-left py-3"
+                            class="menu__link text-sm text-current uppercase font-medium py-3"
                             x-text="menu.label"></span>
                           <svg
                             class="svg-inline--fa fa-angle-down fa-w-10 fa-2x w-3 h-3 transition duration-300 ease-in-out transform lg:group-hover:-rotate-180 ml-2 mb-1 lg:mb-0"
@@ -251,13 +242,13 @@
                           </svg>
                         </button>
                         <ul
-                          class="submenu whitespace-nowrap list-none lg:bg-white lg:w-52 top-full transition-all duration-300 ease-[ease] transform origin-top z-10 lg:shadow-md lg:rounded-md lg:px-3"
+                          class="submenu whitespace-nowrap list-none lg:bg-white lg:w-52 top-full transition-all duration-300 ease-[ease] transform origin-top z-10 lg:shadow-md lg:rounded-md lg:px-3 mb-4 lg:mb-0"
                           :class="{'static lg:absolute visible scale-y-100 opacity-100': selectedMenu === index, 'absolute invisible lg:group-hover:visible scale-y-0 lg:group-hover:scale-y-100 opacity-0 lg:group-hover:opacity-100': selectedMenu !== index }"
                           aria-hidden="true">
 
                           <template x-for="item in menu.submenu" :key="item.id">
                             <li
-                              class="submenu__item text-xs lg:text-sm text-white lg:text-gray-700 hover:text-orange-600 text-center lg:text-left lg:border-b lg:border-solid lg:border-gray-300 lg:last:border-b-0">
+                              class="submenu__item text-xs lg:text-sm text-gray-700 hover:text-orange-600 lg:border-b lg:border-solid lg:border-gray-300 lg:last:border-b-0">
                               <a class="submenu__item-link block text-current py-3" :href="item.url"
                                 x-text="item.label"></a>
                             </li>
@@ -269,6 +260,30 @@
 
                   </li>
                 </template>
+              </ul>
+              <ul class="lg:hidden px-6 pt-8">
+                <li class="mb-4">
+                  <a class="flex items-center space-x-2 text-gray-400 hover:text-gray-500 text-sm" href="">
+                    <span>
+                      <svg class="w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path
+                          d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z" />
+                      </svg>
+                    </span>
+                    <span>+1 (604) 824-2777</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="flex items-center space-x-2 text-gray-400 hover:text-gray-500 text-sm" href="">
+                    <span>
+                      <svg class="w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path
+                          d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z" />
+                      </svg>
+                    </span>
+                    <span>sales@craftypenguins.net</span>
+                  </a>
+                </li>
               </ul>
             </nav>
           </div>
